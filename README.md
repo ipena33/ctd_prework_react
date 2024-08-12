@@ -2,9 +2,11 @@
 
 Download Visual Studio Code or a similar editor
 
-Import the project 
+Import the project
 
-Open the terminal and run the command below:
+Open the terminal and run the commands below:
+
+cd ctd_prework_react
 
 npm run dev
 
