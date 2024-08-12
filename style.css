@@ -2,8 +2,39 @@
   box-sizing: border-box;
 }
 
+h1{
+    text-align: center;
+}
+main{
+    margin-left: 80px;
+    margin-right: 20px;
+    padding: 0px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(183, 100%, 10%);
+    /* padding: 35px;
+    padding-bottom: 10px; */
+    padding-block: 50px;
+    margin: 50px;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+.navbar a:hover{
+    background-color:  hsl(0, 0%, 25%) ;
+}
+.navbar li{
+    float: left;
+}  
+
 body {
-  margin: 0;
+  margin: 0px;
   background-color: hsl(183, 58%, 82%);
   /* background-color: hsl(204, 71%, 73%); */
   color: hsl(183, 100%, 10%);
@@ -52,7 +83,7 @@ body {
   justify-content: space-around;
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto):
+  grid-template-rows: repeat(2, auto); 
 }
 
 /* to organize days into columns */
@@ -74,47 +105,3 @@ body {
   font-size: 0.75rem;
 }
 
-.day-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 75px);
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.day-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid hsl(183, 100%, 10%);
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-}
-
-/* modify card appearance */
-.day-card-day {
-  font-size: 0.75rem;
-  color: hsl(183, 100%, 20%);
-  margin-top: 0.5rem;
-}
-
-/* to space out the hours and center them on page */
-.hour-section {
-  width: 100%;
-  text-align: center;
-  border-spacing: 0;
-}
-
-.hour-row {
-  background-color: hsl(183, 60%, 75%);
-}
-
-/* making every other row darker */
-.hour-row:nth-child(2n) {
-  background-color: hsl(183, 60%, 70%);
-}
-
-/* added more space in between */
-.hour-row > td {
-  padding: 0.25rem 0.5rem;
-}

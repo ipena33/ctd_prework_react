@@ -2,20 +2,29 @@ import './style.css'
  
 import { getWeather } from "./weather"
 
+navigator.geolocation.getCurrentPosition(positionSuccess, positionError)
+
 // to have current timezone
- getWeather(10, 10, Intl.DateTimeFormat().resolvedOptions().timeZone).
- then(renderWeather)
-//  .catch(e => {
-//    console.error(e)
-//    alert("Error getting weather.")
-//  }
- )
+ function positionSuccess({ coords }) {
+  getWeather(coords.latitude, coords.longitude, Intl.DateTimeFormat().resolvedOptions().timeZone)
+    .then(renderWeather)
+//     .catch(e => {
+//       console.error(e)
+//       alert("Error getting weather.")
+//     }
+//  )
+ }
+
+ function positionError() {
+   alert("There was an error getting your location. Allow location in your browser first and refresh your page.")
+ }
+
+
 
  function renderWeather({current, daily, hourly }) {
    renderCurrentWeather(current)
   //  renderDailyWeather(daily)
   //  renderHourlyWeather(hourly)
-   document.body.classList.remove("blurred")
  }
 
 
